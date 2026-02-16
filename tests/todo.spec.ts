@@ -26,7 +26,7 @@ test.describe('Todo App', () => {
     await inputBox.press('Enter');
 
     // คลิก Checkbox เพื่อ Mark เป็น Completed
-    await page.getByRole('checkbox').click();
+    await page.getByRole('checkbox', {name: 'Toggle Todo'}).click();
 
     // ตรวจสอบว่า Item มี class "completed"
     await expect(
